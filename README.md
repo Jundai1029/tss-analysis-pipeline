@@ -14,3 +14,11 @@
   - GRCh38_latest_protein.faa
 - GenBank  
   - Protein and nucleotide sequences were retrieved individually via NCBI (ID-based query), not bulk download
+
+## Directory structure
+src/        : analysis scripts (Python / R)  
+scripts/    : execution scripts  
+notebooks/  : exploratory analysis  
+data/       : input data (not tracked by git)  
+results/    : outputs (not tracked by git)
+

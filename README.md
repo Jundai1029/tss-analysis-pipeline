@@ -3,6 +3,9 @@
 ## Overview
 転写開始点（TSS）の選択が、その後に産生される転写産物およびタンパク質配列の構造・機能多様化に与える影響を、ヒトゲノム全体を対象として網羅的に解析するための統合解析パイプライン。
 
+## Objective
+To systematically quantify how alternative TSS selection alters downstream protein structure and functional domains across the human genome.
+
 ## Data
 - refTSS database  
   - refTSS_v4.1_human_hg38_annotation.txt  
@@ -22,3 +25,16 @@ notebooks/  : exploratory analysis
 data/       : input data (not tracked by git)  
 results/    : outputs (not tracked by git)
 
+## Pipeline Overview
+1. Extract TSS coordinates from refTSS (hg38).
+2. Match transcripts within ±500 bp window.
+3. Perform strand-aware coordinate filtering.
+4. Integrate transcript IDs (NM_, ENST).
+5. Retrieve peptide sequences.
+6. Compare N-terminal differences and domain structures.
+7. Generate integrated annotation table.
+
+## Future Directions
+- Disease-specific isoform prioritization
+- Integration with expression (TPM) filtering
+- Functional domain impact analysis
